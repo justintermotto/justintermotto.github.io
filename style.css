@@ -1,0 +1,147 @@
+/* ============================== HEADER / GLOBAL ============================== */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.header img {
+    width: 85%;
+}
+
+.container {
+    font-family: 'EB Garamond', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 5%;
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:#000000;
+    height: 1px;
+}
+
+/* ============================== TOP LINKS ============================== */
+
+.top-links li:after {
+    content: "/";
+}
+
+.album-cover:hover {
+    filter: grayscale();
+}
+
+ul.top-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.top-links a {
+    text-decoration: none;
+    margin: 0 .5em;
+}
+
+ul.top-links a:hover {
+    text-decoration: underline;
+}
+
+/* ============================== ABOUT ============================== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35em;
+    margin-right: 2em;
+}
+.about {
+    display: flex;
+}
+
+.bio {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+@media screen and (max-width: 900px) {
+    .hero img {
+        margin-right: 0;
+        width: 75%;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* ============================== CREDITS ============================== */
+
+.credits-covers img {
+    max-width: 100%;
+}
+
+.credits-covers {
+    max-width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.credits-covers a {
+    text-align: center;
+    color: #000;
+    text-decoration: none !important;
+}
+.img-wrap {
+    position: relative;
+    height: 200px;
+    width: 257px;
+  }
+  
+    .credits-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    height: 25px;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+    }
+  
+  .img-wrap:hover {
+      filter: contrast(.8);
+  }
+  .img-wrap:hover .credits-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+@media (min-width: 600px) {
+    .credits-covers {
+        max-width: 750px;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+  }

@@ -142,6 +142,6 @@ ul.top-links a:hover {
 @media (min-width: 600px) {
     .credits-covers {
         max-width: 750px;
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(3, 1fr); 
     }
   }

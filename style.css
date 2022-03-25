@@ -139,6 +139,13 @@ ul.top-links a:hover {
     opacity: 1;
   }
 
+@media (min-width: 950px) {
+    .credits-covers {
+        max-width: 950px;
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
 @media (min-width: 600px) {
     .credits-covers {
         max-width: 750px;
